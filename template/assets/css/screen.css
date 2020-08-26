@@ -1,0 +1,15 @@
+/**********************************
+
+Use: Main Screen Import
+
+***********************************/
+
+@import "reset.css";
+@import "core.css";
+
+@import "cmxformTemplate.css";
+@import "cmxform.css";
+.error_validate {
+  color: #8f0000;
+  font-family: 'PT Sans Caption', sans-serif;
+}
