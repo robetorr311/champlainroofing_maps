@@ -126,7 +126,10 @@
   }    
   function bootstrap_load_scripts() {
     wp_enqueue_script( "bootstrap", 'https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js' , array( 'jquery' ) ); 
-  }  
+  }
+  function upload_load_scripts() {
+    wp_enqueue_script( "uploads", plugin_dir_url( __FILE__ ) . 'template/assets/js/uploader.js', array('jquery'), true );
+  }      
   function maps_load_scripts() {
     wp_enqueue_script( "maps", 'https://maps.googleapis.com/maps/api/js?key=', array('jquery'), true );
     wp_enqueue_script( "locations", plugin_dir_url( __FILE__ ) . '/template/assets/js/locations.js' , array( 'jquery','maps' ) ); 
@@ -139,23 +142,12 @@
     wp_register_style('core', plugin_dir_url( __FILE__ ) . 'template/assets/css/core.css');
     wp_enqueue_style( 'screen' );
   }
-  function upload_load_styles(){
-    wp_register_style('upload', plugin_dir_url( __FILE__ ) . 'template/assets/css/jquery-file-upload.css');
-    wp_enqueue_style( 'upload' );
-  }
-  function uploadfile_load_styles(){
-    wp_register_style('uploadfile', plugin_dir_url( __FILE__ ) . 'template/assets/css/uploadfile.css');
-    wp_enqueue_style( 'uploadfile' );
-  }
   function datatables_load_styles(){
     wp_register_style('datatables', plugin_dir_url( __FILE__ ) . 'template/assets/css/jquery.dataTables.min.css');
     wp_enqueue_style( 'datatables' );
   }      
   function validate_load_scripts() {
   wp_enqueue_script( "jquery-validate", plugin_dir_url( __FILE__ ) . 'template/assets/js/jquery.validate.js', array( 'jquery' ) );
-  }
-  function upload_load_scripts() {
-    wp_enqueue_script( "upload", plugin_dir_url( __FILE__ ) . 'template/assets/js/jquery-file-upload.min.js', array( 'jquery' ) );
   }
   function datatables_load_scripts() {
     wp_enqueue_script( "datatables", plugin_dir_url( __FILE__ ) . 'template/assets/js/jquery.dataTables.min.js', array( 'jquery' ) );

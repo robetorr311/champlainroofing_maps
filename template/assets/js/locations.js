@@ -45,7 +45,7 @@
             '</div>' +
             '<h1 id="firstHeading" class="firstHeading" ><span style="color: #ffffff;"'+val.address+'</span></h1>' +
             '<div id="bodyContent">' +
-            '<p><img src="'+popupimageurl+'" width="600px" height="483px" /></p><div style="background: #ffffff; color: #102e43; border: 5px solid #102e43; "><p>' +
+            '<p><img src="'+val.image+'" width="600px" height="483px" /></p><div style="background: #ffffff; color: #102e43; border: 5px solid #102e43; "><p>' +
             val.description +
             '</div></p>' +
             '</div>' +

@@ -57,14 +57,20 @@
         <input type="text" id="longitude" name="longitude" class="form-control" placeholder="Longitude">
       </div>
     </td>
+  </tr>
+</table>
+<table>
+  <tr>
     <td>
       <div class="form-group">
         Image:
-        <input type="hidden" id="picture" name="picture">
-        <div id="fileupload3">Image</div>
+        <input type="text" id="picture" name="picture">
+        <input id="upload_button_map" type="button" class="button button-primary" value="Upload and Choose an Image" />
       </div>
     </td>    
   </tr>
+  </table>
+  <table>
   <tr>
     <td>
       <button type="submit" class="button button-primary">Submit</button>
@@ -183,24 +189,7 @@ jQuery(document).ready( function($) {
                 location.reload();
             });            
           }
-        });
-        jQuery("#fileupload3").uploadFile({
-          url: ajaxurl,
-          formData: { action: 'uploadfile' },
-          fileName:"myfile",
-          allowedTypes: "jpg,png,gif",
-          maxFileSize: "5358562",
-          allowDuplicates: false,
-          duplicateStrict: true,
-          showFileCounter: false,
-          maxFileCount:1,
-          showStatusAfterSuccess: false,
-          showProgress: false,  
-          onSuccess:function(data)
-           {
-             jQuery("#picture").val(data); 
-           }
-         });         
+        });      
 });
 function save_location(){
     var pages=jQuery("#pages").val();
